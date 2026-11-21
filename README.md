@@ -4,6 +4,8 @@ A Python-based REST API that accepts a message containing a single call-to-actio
 
 The application uses FastAPI for request handling and validation, with concurrent publishing attempts and independent error handling for each platform.
 
+**GitHub Repository:** https://github.com/vedavenkat2902/automated-multi-platform-posting
+
 ## Features
 
 - REST API built using FastAPI.
@@ -37,9 +39,9 @@ The application uses FastAPI for request handling and validation, with concurren
 4. Telegram
 5. Discord
 
-Each platform has its own integration module.
+Each platform has its own integration module and publishing workflow.
 
-WordPress, Blogger, and DEV Community publish posts publicly. Telegram publishes messages to a configured channel, while Discord publishes messages through a channel webhook.
+The application supports public publishing on WordPress, Blogger, and DEV Community, along with channel-based message publishing on Telegram and Discord.
 
 ## Project Structure
 
@@ -57,12 +59,22 @@ automated-posting/
 │   │   ├── blogger.py
 │   │   ├── devto.py
 │   │   ├── telegram.py
-│   │   ├── discord.py
+│   │   └── discord.py
+│   │
 │   └── services/
 │       └── posting_service.py
 │
 ├── tests/
 │   └── test_posting.py
+│
+├── evidence/
+│   ├── api-response-success.json
+│   ├── wordpress-dashboard.png
+│   ├── blogger-post.png
+│   ├── devto-dashboard.png
+│   ├── devto-article-analytics.png
+│   ├── telegram-messages.png
+│   └── discord-messages.png
 │
 ├── blogger_auth.py
 ├── .env.example
@@ -71,14 +83,13 @@ automated-posting/
 └── README.md
 ```
 
-
 ## Installation and Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd automated-posting
+git clone https://github.com/vedavenkat2902/automated-multi-platform-posting.git
+cd automated-multi-platform-posting
 ```
 
 ### 2. Create a virtual environment
@@ -126,9 +137,9 @@ DISCORD_WEBHOOK_URL=
 
 Use valid credentials and grant the required permissions for each platform.
 
-WordPress uses OAuth authorization through the `/wordpress/connect` and `/wordpress/callback` routes.
+**WordPress:** Uses OAuth authorization through the `/wordpress/connect` and `/wordpress/callback` routes.
 
-Blogger requires a Google Cloud project with the Blogger API enabled and OAuth desktop application credentials. Place the downloaded `credentials.json` file in the project root and run:
+**Blogger:** Requires a Google Cloud project with the Blogger API enabled and OAuth desktop application credentials. Place the downloaded `credentials.json` file in the project root and run:
 
 ```bash
 py blogger_auth.py
@@ -234,6 +245,8 @@ The test suite covers:
 - Partial success handling.
 - Platform publishing calls and response structure.
 
+**Latest test result:** 10 tests passed.
+
 ## Security
 
 - API credentials are loaded through environment variables.
@@ -241,6 +254,20 @@ The test suite covers:
 - Google OAuth credential and token files are excluded from version control.
 - `.env.example` provides a configuration template without exposing secrets.
 - Platform integrations handle API errors independently.
+
+## Evidence
+
+The `evidence/` directory contains screenshots and API response data demonstrating the application's platform integrations.
+
+| File | Description |
+|---|---|
+| `api-response-success.json` | API response from an earlier successful run across all five platforms |
+| `wordpress-dashboard.png` | WordPress published posts |
+| `blogger-post.png` | Published Blogger post |
+| `devto-dashboard.png` | DEV Community published posts dashboard |
+| `devto-article-analytics.png` | DEV Community article analytics |
+| `telegram-messages.png` | Messages published to the Telegram channel |
+| `discord-messages.png` | Messages published to the Discord channel |
 
 ## Author
 

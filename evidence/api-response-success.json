@@ -1,0 +1,51 @@
+
+{
+  "success": true,
+  "results": [
+    {
+      "platform": "WordPress",
+      "status": "success",
+      "posted_url": "https://multiplatformpublisher29.wordpress.com/2026/11/21/update-from-automated-posting-system-6/",
+      "public_access": true,
+      "date": "2026-11-21",
+      "time": "03:46:27",
+      "error": null
+    },
+    {
+      "platform": "Blogger",
+      "status": "success",
+      "posted_url": "https://multiplatformpublisher29.blogspot.com/2026/11/update-from-automated-posting-system_0270887341.html",
+      "public_access": true,
+      "date": "2026-11-21",
+      "time": "03:46:25",
+      "error": null
+    },
+    {
+      "platform": "DEV Community",
+      "status": "success",
+      "posted_url": "https://dev.to/multiplatform_publisher_5/update-from-automated-multi-platform-posting-system-1mij",
+      "public_access": true,
+      "date": "2026-11-21",
+      "time": "03:46:30",
+      "error": null
+    },
+    {
+      "platform": "Telegram",
+      "status": "success",
+      "posted_url": "https://t.me/automated_posting_updates/5",
+      "public_access": true,
+      "date": "2026-11-21",
+      "time": "03:46:27",
+      "error": null
+    },
+    {
+      "platform": "Discord",
+      "status": "success",
+      "posted_url": null,
+      "public_access": null,
+      "date": "2026-11-21",
+      "time": "03:46:27",
+      "error": null
+    }
+  ]
+}
