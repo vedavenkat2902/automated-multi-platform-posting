@@ -13,8 +13,10 @@ SCOPES = [
 ]
 
 # File locations
-CREDENTIALS_FILE = "credentials.json"
-TOKEN_FILE = "token.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+CREDENTIALS_FILE = os.path.join(BASE_DIR, "credentials.json")
+TOKEN_FILE = os.path.join(BASE_DIR, "token.json")
 
 
 def authenticate_blogger():
